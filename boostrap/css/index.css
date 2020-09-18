@@ -93,7 +93,6 @@ section .section-title {
 
 .textaboveimg {
     color: black;
-    font-size: 50px;
     position: absolute;
     top: 80%;
     left: 70%;
@@ -103,22 +102,36 @@ section .section-title {
     text-align: center;
 }
 
-.img__description {
+
+.overlaymini {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: 61%;
     right: 0;
-    background: rgba(29, 106, 154, 0.72);
-    color: #fff;
-    visibility: hidden;
+    height: 100%;
+    width: 35%;
     opacity: 0;
-  
-    /* transition effect. not necessary */
-    transition: opacity .2s, visibility .2s;
+    transition: .5s ease;
+    background-color: #5A462D;
   }
 
-  #prueba2:hover .img__description {
-    visibility: visible;
-    opacity: 1;
+  @media only screen and (max-width: 767px) {
+    .overlaymini {
+        /*Texto para reducir el top del overlay*/
+    }
   }
+  
+  .wrapcontainer:hover .overlaymini {
+    opacity: 0.7;
+  }
+  
+  .textmini {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
