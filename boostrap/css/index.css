@@ -105,20 +105,30 @@ section .section-title {
 
 .overlaymini {
     position: absolute;
-    top: 0;
+    top: 6%;
     bottom: 0;
     left: 61%;
     right: 0;
-    height: 100%;
+    height: 94%;
     width: 35%;
     opacity: 0;
     transition: .5s ease;
     background-color: #5A462D;
   }
 
+  @media only screen and (max-width: 991px) {
+    .overlaymini {
+        top: 9%;
+        height: 91%;
+        width: 33%;
+    }
+  }
+
   @media only screen and (max-width: 767px) {
     .overlaymini {
-        /*Texto para reducir el top del overlay*/
+        top: 4%;
+        height: 96%;
+        width: 36%;
     }
   }
   
